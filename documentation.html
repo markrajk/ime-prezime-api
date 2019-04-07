@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ime & Prezime API | Dokumentacija</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic,cyrillic-ext"
+        rel="stylesheet">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Početna</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="documentation.html">Dokumentacija</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Ime & Prezime</h1>
+            <p class="lead">Jednostavan API sa preko 8000 srpskih imena i prezimena</p>
+            <hr class="my-4">
+            <p>Dozvoljeni parametri su brojevi od <b>1</b> do <b>99</b></p>
+            <hr class="my-4">
+            <p><b>https://ime-prezime.herokuapp.com/</b></p>
+            <p><b>https://ime-prezime.herokuapp.com/</b>1-99</p>
+            <p><b>https://ime-prezime.herokuapp.com/m/</b>1-99 (muška imena)</p>
+            <p><b>https://ime-prezime.herokuapp.com/z/</b>1-99 (ženska imena)</p>
+        </div>
+    </div>
+
+    <!-- EXAMPLE 01-->
+    <div class="container">
+        <div class="card" style="margin-top: 30px;">
+            <div class="card-header">
+                Primer01: <b>https://ime-prezime.herokuapp.com</b>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Rezultat ovog poziva</h5>
+                <p class="card-text">je 1 nasumično ime (muško ili žensko)</p>
+                <pre>
+                    <code>
+    {
+        data: <span>"Јелен Челенковић"</span>
+    }
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- EXAMPLE -->
+    <div class="container">
+        <div class="card" style="margin-top: 30px;">
+            <div class="card-header">
+                Primer02: <b>https://ime-prezime.herokuapp.com/20</b>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Rezultat ovog poziva</h5>
+                <p class="card-text">su 20 nasumičnih imena (muška i ženska)</p>
+                <pre>
+                            <code>
+        {
+            - data: [
+                <span>"Јелен Челенковић"</span>,
+                <span>"Миленија Гарчић"</span>,
+                <span>"Станојла Андулајевић"</span>,
+                <span>"Костадинка Кокерић"</span>,
+                <span>"Аранђел Беловуковић"</span>,
+                <span>"Мишо Вараклић"</span>,
+                <span>"Жанка Радојичић"</span>,
+                <span>"Јанко Бујишић"</span>,
+                <span>"Владанка Анђић"</span>,
+                <span>"Танкосава Сеовић"</span>,
+                <span>"Стана Ћуповић"</span>,
+                <span>"Дана Симатовић"</span>,
+                <span>"Пејо Абазовић"</span>,
+                <span>"Савица Дотлић"</span>,
+                <span>"Анђела Гиздавић"</span>,
+                <span>"Радован Тршић"</span>,
+                <span>"Вукосава Караичић"</span>,
+                <span>"Емилијан Звекић"</span>,
+                <span>"Његомирка Мавровић"</span>,
+                <span>"Биљан Веизовић</span>"
+            ]
+        }
+                            </code>
+                        </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- EXAMPLE 03-->
+    <div class="container">
+        <div class="card" style="margin-top: 30px;">
+            <div class="card-header">
+                Primer03: <b>https://ime-prezime.herokuapp.com/m/20</b>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Rezultat ovog poziva</h5>
+                <p class="card-text">su 20 nasumičnih imena (muška)</p>
+                <pre>
+                        <code>
+        {
+            - data: [
+                <span>"Трипко Батрићевић"</span>,
+                <span>"Ђуриша Крстичевић"</span>,
+                <span>"Михајло Михалџић"</span>,
+                <span>"Дојчило Шешић"</span>,
+                <span>"Станојло Бабарогић"</span>,
+                <span>"Пера Митуљевић"</span>,
+                <span>"Вилотије Блажаревић"</span>,
+                <span>"Радоба Ивелић"</span>,
+                <span>"Вуксан Рајачић"</span>,
+                <span>"Вукота Анкуцовић"</span>,
+                <span>"Тихомир Дотлић"</span>,
+                <span>"Обретен Недељковић"</span>,
+                <span>"Радета Сојевић"</span>,
+                <span>"Борко Ковинић"</span>,
+                <span>"Јустин Топузовић"</span>,
+                <span>"Мато Навалушић"</span>,
+                <span>"Малеш Скевелић"</span>,
+                <span>"Драгомир Букушић"</span>,
+                <span>"Братован Скочић"</span>,
+                <span>"Мрђан Нектаријевић</span>"
+            ]
+        }
+                        </code>
+                    </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- EXAMPLE 04-->
+    <div class="container">
+        <div class="card" style="margin-top: 30px;">
+            <div class="card-header">
+                Primer04: <b>https://ime-prezime.herokuapp.com/z/20</b>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Rezultat ovog poziva</h5>
+                <p class="card-text">su 20 nasumičnih imena (ženska)</p>
+                <pre>
+                        <code>
+        {
+            - data: [
+                <span>"Богданка Шиндић"</span>,
+                <span>"Миладинка Радивојчевић"</span>,
+                <span>"Дора Пуреновић"</span>,
+                <span>"Златинка Которчевић"</span>,
+                <span>"Мајда Ћуповић"</span>,
+                <span>"Раденка Ђукетић"</span>,
+                <span>"Зорица Пропадовић"</span>,
+                <span>"Драгица Вучићевић"</span>,
+                <span>"Станисава Негојевић"</span>,
+                <span>"Стојана Буљубашић"</span>,
+                <span>"Мионка Бусанчић"</span>,
+                <span>"Цветана Ваљановић"</span>,
+                <span>"Весна Дамљановић"</span>,
+                <span>"Славица Милчановић"</span>,
+                <span>"Стевка Ђурасиновић"</span>,
+                <span>"Анда Бечић"</span>,
+                <span>"Убавка Ромовић"</span>,
+                <span>"Викторија Апић"</span>,
+                <span>"Велинка Радујевић"</span>,
+                <span>"Сузана Басарић</span>"
+            ]
+        }
+                        </code>
+                    </pre>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="card text-center">
+            <div class="card-footer text-muted">
+                © 2019 Copyright: markrajk
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="public/js/bootstrap.min.js"></script>
+    <script src="public/js/main.js"></script>
+</body>
+
+</html>
